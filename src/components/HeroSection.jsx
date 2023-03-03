@@ -19,7 +19,6 @@ const HeroSection = () => {
       url: API_URL + "/getTopRated",
     });
     setPosts([...result.data]);
-    console.log(result.data);
   };
 
   return (

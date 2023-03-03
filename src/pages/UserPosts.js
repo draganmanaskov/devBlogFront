@@ -22,7 +22,6 @@ const UserPosts = () => {
       url: API_URL + `/userPosts/${user.id}`,
     });
     setPosts(result.data);
-    console.log(result.data);
   };
 
   useEffect(() => {
@@ -30,7 +29,6 @@ const UserPosts = () => {
   }, []);
 
   const deletePost = async (index) => {
-    //toast.warning("Not Implemented");
     try {
       const API_URL = `${process.env.REACT_APP_API_URL}/api/post`;
       let result = await axios({

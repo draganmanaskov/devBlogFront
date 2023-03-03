@@ -38,6 +38,7 @@ const EditPost = () => {
   });
 
   const onChange = (e) => {
+    console.log(e.target.name, e.target.value);
     setPostForm((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,

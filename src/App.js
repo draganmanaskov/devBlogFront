@@ -26,7 +26,6 @@ const ROLES = {
 };
 
 function App() {
-  console.log("test");
   return (
     <>
       <Routes>

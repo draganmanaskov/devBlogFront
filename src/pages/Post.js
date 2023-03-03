@@ -45,7 +45,6 @@ const Post = () => {
       postData.comments = postData.comments.reverse();
 
       setPost(postData);
-      console.log(result.data);
     } catch (error) {
       toast.error(error);
     }

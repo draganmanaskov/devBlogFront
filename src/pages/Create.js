@@ -14,10 +14,8 @@ import {
   Checkbox,
   Select,
 } from "@mui/material";
-import { Navigate } from "react-router-dom";
 
 const Create = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { user, loading, error } = useSelector((state) => state.auth);
@@ -49,7 +47,6 @@ const Create = () => {
       method: "get",
       url: API_URL + "/getAllTags",
     });
-    console.log(user.token);
     setTags(result.data);
   };
 
@@ -87,8 +84,6 @@ const Create = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(selectedTags);
     const API_URL = `${process.env.REACT_APP_API_URL}/api/post`;
     try {
       let result = await axios({

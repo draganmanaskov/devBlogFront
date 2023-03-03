@@ -11,7 +11,7 @@ const register = async (userData) => {
   });
 
   if (response.data) {
-    localStorage.setItem("blog-dev-user", JSON.stringify(response.data));
+    sessionStorage.setItem("blog-dev-user", JSON.stringify(response.data));
   }
 
   return response.data;
@@ -27,7 +27,7 @@ const login = async (userData) => {
   });
 
   if (response.data) {
-    localStorage.setItem("blog-dev-user", JSON.stringify(response.data));
+    sessionStorage.setItem("blog-dev-user", JSON.stringify(response.data));
   }
 
   return response.data;
